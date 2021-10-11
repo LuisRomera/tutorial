@@ -11,6 +11,8 @@ import java.util.logging.Logger
 object ApplicaciotnInit {
   val log: Logger = Logger.getLogger(this.getClass.getName)
 
+//  https://www.baeldung.com/scala/category/akka
+
   def main(args: Array[String]): Unit = {
     val configuration = new Configuration(args(0))
     log.info(s"Init application ${configuration.appName}")

@@ -9,11 +9,13 @@ class Starting extends Topics {
 
   final val log: Logger = Logger.getLogger(this.getClass.getName)
 
-  def condicionales() = {
-    val a = 4
-    var b = 6
-    b = if (b < a) a else b
-    if (b < a) log.info(s"$a es mayor que $b") else log.info(s"$a es menor que $b")
+  def tryCatch(): Unit = {
+    try {
+      val s: Int = "32sa".toInt
+    } catch {
+      case ex: NumberFormatException =>
+        log.severe("Error transformado string a int")
+    }
   }
 
   /**
@@ -23,13 +25,36 @@ class Starting extends Topics {
     varibles()
     metodos()
     condicionales()
-    listas()
+    tryCatch()
+    bucles()
   }
 
+  def bucles(): Unit = {
+    var i = 0
+    while (i < 10) {
+      log.info(s"print $i")
+      i += 1
+    }
 
-  private def listas(): Unit = {
+    do {
+      log.info(s"print $i")
+      i -= 2
+    } while (i > 0)
+
+    for (w <- 1 to 10) {
+      i += 2
+    }
+    val resultado = Range.inclusive(1, 10, 3).foreach(print(_))
 
   }
+
+  def condicionales() = {
+    val a = 4
+    var b = 6
+    b = if (b < a) a else b
+    if (b < a) log.info(s"$a es mayor que $b") else log.info(s"$a es menor que $b")
+  }
+
 
   private def devuelve(numeroA: Int, numeroB: Int): Int = numeroA + numeroB
 

@@ -9,12 +9,20 @@ class Starting extends Topics {
 
   final val log: Logger = Logger.getLogger(this.getClass.getName)
 
+  def condicionales() = {
+    val a = 4
+    var b = 6
+    b = if (b < a) a else b
+    if (b < a) log.info(s"$a es mayor que $b") else log.info(s"$a es menor que $b")
+  }
+
   /**
    * Comienza el tutorial
    */
   override def start(): Unit = {
     varibles()
     metodos()
+    condicionales()
     listas()
   }
 

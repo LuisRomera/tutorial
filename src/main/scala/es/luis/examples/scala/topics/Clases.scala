@@ -14,8 +14,8 @@ class Clases extends Topics {
     }catch {
       case exception: IllegalArgumentException => log.severe(exception.getMessage)
     }
-    val demoClase = new DemoClase((Vector(1, 2, 3, 4)))
-    demoClase.flattenVector
+    val demoClase = new DemoClase(Vector(1, 2, 3, 4))
+    demoClase.flattenVector.foreach(r => log.info(r.toString))
     log.info(demoClase.toString)
   }
 }

@@ -1,7 +1,6 @@
 package es.luis.examples.scala.topics
 
 import java.util.logging.Logger
-import scala.::
 import scala.annotation.tailrec
 
 /**

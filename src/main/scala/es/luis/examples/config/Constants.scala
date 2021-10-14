@@ -6,4 +6,6 @@ object Constants {
 
   final val SPARK: String = "spark"
 
+  final val AKKA: String = "akka"
+
 }

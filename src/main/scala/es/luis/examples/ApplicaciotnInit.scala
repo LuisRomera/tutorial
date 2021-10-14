@@ -17,8 +17,6 @@ object ApplicaciotnInit {
   def main(args: Array[String]): Unit = {
     val configuration = new Configuration(args(0))
     log.info(s"Init application ${configuration.appName}")
-
-
     configuration.tutorial match {
       case SCALA => new TutorialScala().start()
       case AKKA => Pipeline.start()

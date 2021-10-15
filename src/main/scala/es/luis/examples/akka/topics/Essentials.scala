@@ -70,7 +70,7 @@ class Essentials(name: String) extends AkkaTutorial(name) {
     def executeFuture(): Unit = {
       futureA()
       futureB()
-      futureC()
+//      futureC()
     }
 
 

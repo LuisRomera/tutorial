@@ -61,5 +61,17 @@ object Variables extends App {
 
   ('a' to 'z').foreach(println(_))
 
+  var iniciarVariable: String = _
+  var iniciarIntVariable: Int = _
+  var iniciarList: List[String] = _
+
+  // Parttern Matching
+  val color = "yellow"
+
+  color match {
+    case color if(color == "blue" || color == "green")  => println(s"El color es $color")
+    case "red" | "yellow" => println(s"El color es $color")
+    case _ => println("No hay color¿?")
+  }
 
 }

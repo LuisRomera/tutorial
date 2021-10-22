@@ -20,7 +20,7 @@ object ApplicaciotnInit {
     configuration.tutorial match {
       case SCALA => new TutorialScala().start()
       case AKKA => Pipeline.start()
-      case SPARK => TutorialSpark.start()
+//      case SPARK => TutorialSpark.start()
     }
 
   }
